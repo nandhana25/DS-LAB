@@ -45,6 +45,7 @@ void concatenate() {
 
 void display(struct Node* head) {
     struct Node* temp = head;
+    printf("Concatenated list: \n");
     while (temp != NULL) {
         printf("%d ", temp->data);
         temp = temp->next;
@@ -53,9 +54,13 @@ void display(struct Node* head) {
 
 int main() {
     int n1, n2;
+    printf("Enter number of nodes in linked list 1: ");
     scanf("%d", &n1);
+    printf("Enter the elements: ");
     createList(&head1, n1);
+    printf("Enter number of nodes in linked list 2: ");
     scanf("%d", &n2);
+    printf("Enter the elements: ");
     createList(&head2, n2);
     concatenate();
     display(head1);
